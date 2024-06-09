@@ -17,35 +17,35 @@ class Parser():
         Certain Subscriptions need data type specified 
         '''
         self.__Subscriptions = []
-        self.__NeedsSpecialAttention = ['1E051000','1E055000','1E059000','1E05D000','1E067000']
+        self.__NeedsSpecialAttention = ['1E051','1E055','1E059','1E05D','1E067']
         self.__ValidIODataTypes = {'bool', "duty_cycle", "msec"}
         
         self.__Map = {
-            '1E001000' : {'Function':self.__RTCAndRPM,'Index':0,},
-            '1E005000' : {'Function':self.__FuelFLowAndInjector,'Index':1,},
-            '1E009000' : {'Function':self.__CLStatusAndDutyC,'Index':2,},
-            '1E00D000' : {'Function':self.__AFRLandCLC,'Index':3,},
-            '1E011000' : {'Function':self.__TargetAFRAndAFRR,'Index':4,},
-            '1E015000' : {'Function':self.__IgTimeAndAFRAVE,'Index':5,},
-            '1E019000' : {'Function':self.__MAPandKtard,'Index':6,},
-            '1E01D000' : {'Function':self.__MATandTPS,'Index':7,},
-            '1E021000' : {'Function':self.__BaroAndCTS,'Index':8,},
-            '1E025000' : {'Function':self.__OilAndVoltage,'Index':9,},
-            '1E029000' : {'Function':self.__PedalPosAndFuelPress,'Index':10,},
-            '1E02D000' : {'Function':self.__BoostGearAndRevLimit,'Index':11,},
-            '1E031000' : {'Function':self.__BoostSpeedAndStage,'Index':12,},
-            '1E035000' : {'Function':self.__BoostTargetAndTime,'Index':13,},
-            '1E039000' : {'Function':self.__BoostAndSolenoid,'Index':14,},
-            '1E03D000' : {'Function':self.__N20S1AndWaterMeth,'Index':15,},
-            '1E041000' : {'Function':self.__N20S2andS3,'Index':16,},
-            '1E045000' : {'Function':self.__GearAndN20S4,'Index':17,},
-            '1E049000' : {'Function':self.__LinePressureAndSpeed,'Index':18,},
-            '1E04D000' : {'Function':self.__InputShaftSpeedAndLineTemp,'Index':19,},
-            '1E051000' : {'Function':self.__Input1And2,'Index':20,"DefinedAs":'bool'},
-            '1E055000' : {'Function':self.__Input3And4,'Index':21,"DefinedAs":'bool'},
-            '1E059000' : {'Function':self.__Output1AndInput5,'Index':22,"DefinedAs":'bool'},
-            '1E05D000' : {'Function':self.__Output2And3,'Index':23,"DefinedAs":'bool'},
-            '1E067000' : {'Function':self.__Output4And5,'Index':24,"DefinedAs":'bool'},
+            '1E001' : {'Function':self.__RTCAndRPM,'Index':0,},
+            '1E005' : {'Function':self.__FuelFLowAndInjector,'Index':1,},
+            '1E009' : {'Function':self.__CLStatusAndDutyC,'Index':2,},
+            '1E00D' : {'Function':self.__AFRLandCLC,'Index':3,},
+            '1E011' : {'Function':self.__TargetAFRAndAFRR,'Index':4,},
+            '1E015' : {'Function':self.__IgTimeAndAFRAVE,'Index':5,},
+            '1E019' : {'Function':self.__MAPandKtard,'Index':6,},
+            '1E01D' : {'Function':self.__MATandTPS,'Index':7,},
+            '1E021' : {'Function':self.__BaroAndCTS,'Index':8,},
+            '1E025' : {'Function':self.__OilAndVoltage,'Index':9,},
+            '1E029' : {'Function':self.__PedalPosAndFuelPress,'Index':10,},
+            '1E02D' : {'Function':self.__BoostGearAndRevLimit,'Index':11,},
+            '1E031' : {'Function':self.__BoostSpeedAndStage,'Index':12,},
+            '1E035' : {'Function':self.__BoostTargetAndTime,'Index':13,},
+            '1E039' : {'Function':self.__BoostAndSolenoid,'Index':14,},
+            '1E03D' : {'Function':self.__N20S1AndWaterMeth,'Index':15,},
+            '1E041' : {'Function':self.__N20S2andS3,'Index':16,},
+            '1E045' : {'Function':self.__GearAndN20S4,'Index':17,},
+            '1E049' : {'Function':self.__LinePressureAndSpeed,'Index':18,},
+            '1E04D' : {'Function':self.__InputShaftSpeedAndLineTemp,'Index':19,},
+            '1E051' : {'Function':self.__Input1And2,'Index':20,"DefinedAs":'bool'},
+            '1E055' : {'Function':self.__Input3And4,'Index':21,"DefinedAs":'bool'},
+            '1E059' : {'Function':self.__Output1AndInput5,'Index':22,"DefinedAs":'bool'},
+            '1E05D' : {'Function':self.__Output2And3,'Index':23,"DefinedAs":'bool'},
+            '1E067' : {'Function':self.__Output4And5,'Index':24,"DefinedAs":'bool'},
         }
 
         #GenerateDefaultSubscribeList 
